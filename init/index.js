@@ -5,7 +5,10 @@ module.exports = async app => {
     require('./view')(app)
 
     require('../utils')(app)
-    await require('./controller')(app)
-    
+
+    await app.utils.create(app,"model")
+    await app.utils.create(app,"service")
+    await app.utils.create(app,"controller")
+
     require('../app/router')(app)
 }
