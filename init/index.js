@@ -1,13 +1,11 @@
 
-module.exports = app => {
+module.exports = async app => {
     require('./path')(app)    
     require('./static')(app)
     require('./view')(app)
 
     require('../utils')(app)
-    require('./controller')(app)
-
-    setTimeout(() => {
-        require('../app/router')(app)
-    }, 1000);
+    await require('./controller')(app)
+    
+    require('../app/router')(app)
 }
