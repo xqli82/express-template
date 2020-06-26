@@ -14,7 +14,7 @@
 
 # 自动加载文件
 
-app文件夹(service/controller/model)等下创建文件后,无需手动配置,会自动加载;
+app文件夹中的(service/controller/model)等文件夹下创建文件后,无需手动配置,会自动加载;
 
 # 使用方法:
 
