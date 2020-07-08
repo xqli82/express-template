@@ -11,4 +11,8 @@ module.exports = async app => {
     await app.utils.create(app,"controller")
 
     require('../app/router')(app)
+
+    process.on('uncaughtException',function(){
+        console.log('-------------uncaughtException-------------')
+    })
 }
